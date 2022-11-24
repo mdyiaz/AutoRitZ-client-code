@@ -1,0 +1,35 @@
+[
+    {
+      "_id": "637f3389b1c0caa0369544fc",
+      "originalPrice": "$20 Million",
+      "picture": "https://topelectricsuv.com/wp-content/uploads/2021/11/Tesla-Model-2-front-three-quarter-right-rendering.jpg",
+      "price": "$10 million",
+      "location": "Dhaka, Gulshan",
+      "name": "Tesla Model 2",
+      "yearsOfUse": "2 Years",
+      "time": "24 November 2022",
+      "sellersName": "MD Yiaz"
+    },
+    {
+      "_id": "637f3389f445b2acc4c8da83",
+      "originalPrice": "$11 million",
+      "picture": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F09%2Flucid-motors-lucid-air-1080-hp-electric-car-luxury-sedan-official-first-look-tw.jpg?w=960&cbr=1&q=90&fit=max",
+      "price": "$8 Million",
+      "location": "Dhaka, Dhanmondi",
+      "name": "Lucid Motors",
+      "yearsOfUse": "1 Year",
+      "time": "26 november 2022",
+      "sellersName": "MD Riaz"
+    },
+    {
+      "_id": "637f33890905f92e89bfbc78",
+      "originalPrice": "$13 million",
+      "picture": "https://cdn.dlron.us/static/dealer-9844/96378-nocs-lp-altima-hero.jpg",
+      "price": "9 Million",
+      "location": "Dhaka, Banani",
+      "name": "Nissan",
+      "yearsOfUse": "3 years",
+      "time": "10 November 2022",
+      "sellersName": "MD Riazul Islam Riaz"
+    }
+  ]

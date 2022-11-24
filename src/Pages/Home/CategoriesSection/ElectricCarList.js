@@ -34,11 +34,12 @@ const ElectricCarList = () => {
 
      </div>
 
-     <button className="btn btn-outline btn-primary">Uses: {electricCar.yearsOfUse}</button>
+     <button className="btn btn-outline btn-primary text-white mb-2">Uses: {electricCar.yearsOfUse}</button>
 
 
-      <button className="btn btn-warning">Selling Price: {electricCar.price}</button>
-      <button className="btn btn-active btn-primary">Original Price: {electricCar.originalPrice}</button>
+      <button className="btn btn-warning text-white mb-2">Selling Price: {electricCar.price}</button>
+      <button className="btn btn-active btn-primary text-white mb-2">Original Price: {electricCar.originalPrice}</button>
+      <button className="btn btn-success w-full text-white">Book Now</button>
 
 
     </div>

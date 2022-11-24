@@ -6,6 +6,7 @@ import Blogs from "../../Pages/Blogs/Blogs"
 import ElectricCarList from "../../Pages/Home/CategoriesSection/ElectricCarList";
 import LuxuryCarList from "../../Pages/Home/CategoriesSection/LuxuryCarList";
 import MicroBusCarList from "../../Pages/Home/CategoriesSection/MicroBusCarList";
+import Register from "../../Pages/Register/Register";
 
  const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ import MicroBusCarList from "../../Pages/Home/CategoriesSection/MicroBusCarList"
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             },
             {
                 path:'/blogs',

@@ -34,11 +34,13 @@ const LuxuryCarList = () => {
 
      </div>
 
-     <button className="btn btn-outline btn-primary">Uses: {luxuryCar.yearsOfUse}</button>
+     <button className="btn btn-outline btn-primary mb-2 text-white">Uses: {luxuryCar.yearsOfUse}</button>
 
 
-      <button className="btn btn-warning">Selling Price: {luxuryCar.price}</button>
-      <button className="btn btn-active btn-primary">Original Price: {luxuryCar.originalPrice}</button>
+      <button className="btn btn-warning mb-2 text-white">Selling Price: {luxuryCar.price}</button>
+      <button className="btn btn-active btn-primary mb-2 text-white">Original Price: {luxuryCar.originalPrice}</button>
+      <button className="btn btn-success w-full text-white ">Book Now</button>
+
 
 
     </div>

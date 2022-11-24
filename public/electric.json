@@ -8,7 +8,8 @@
       "name": "Tesla Model 2",
       "yearsOfUse": "2 Years",
       "time": "24 November 2022",
-      "sellersName": "MD Yiaz"
+      "sellersName": "MD Yiaz",
+      "details": "Tesla's Model S was the first mass-market car to prove that EVs can be exciting to drive, viable as daily transportation, and usable for long trips."
     },
     {
       "_id": "637f3389f445b2acc4c8da83",
@@ -19,7 +20,8 @@
       "name": "Lucid Motors",
       "yearsOfUse": "1 Year",
       "time": "26 november 2022",
-      "sellersName": "MD Riaz"
+      "sellersName": "MD Riaz",
+      "details": "Lucid is the future of sustainable mobility, designing luxury electric cars that further reimagines the driving experience."
     },
     {
       "_id": "637f33890905f92e89bfbc78",
@@ -30,6 +32,7 @@
       "name": "Nissan",
       "yearsOfUse": "3 years",
       "time": "10 November 2022",
-      "sellersName": "MD Riazul Islam Riaz"
+      "sellersName": "MD Riazul Islam Riaz",
+      "details": "Shop online for the newest Nissan cars, trucks, crossovers, SUVs and electric vehicles. Explore offers, compare models, calculate payments and more."
     }
   ]

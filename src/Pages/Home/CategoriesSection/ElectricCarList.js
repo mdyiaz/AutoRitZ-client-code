@@ -25,7 +25,7 @@ const ElectricCarList = () => {
       {electricCar.name}
       <div className="badge badge-secondary">SecondHand</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p className='mb-3'>{electricCar.details}</p>
     <div className="card-actions justify-end">
      <div className=''>
             <div className="badge badge-outline"><span className='font-bold'>Location:_ </span> { electricCar.location}</div> 

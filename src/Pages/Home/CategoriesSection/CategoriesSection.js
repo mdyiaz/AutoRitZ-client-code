@@ -30,16 +30,14 @@ const CategoriesSection = () => {
                 <div>
                     <img className='rounded-xl h-64 w-11/12' src={car_2} alt="" />
                     <p className='text-3xl font-bold mt-3 text-center'>Luxury car</p>
-                    <button className="btn btn-secondary w-full mt-3">See _ More</button>
-
+                    <Link to="/luxurycarlist"><button className="btn btn-secondary w-full mt-3">See _ More</button></Link>
                 </div>
 
 
                 <div>
                     <img className='rounded-xl h-64 w-11/12' src={car_3} alt="" />
                     <p className='text-3xl font-bold mt-3 text-center'>MicroBus Car</p>
-                    <button className="btn btn-secondary w-full mt-3">See _ More</button>
-
+                   <Link to="/microbuscarlist"> <button className="btn btn-secondary w-full mt-3">See _ More</button></Link>
                 </div>
 
 

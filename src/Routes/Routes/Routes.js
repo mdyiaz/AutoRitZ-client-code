@@ -4,6 +4,8 @@ import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Blogs from "../../Pages/Blogs/Blogs"
 import ElectricCarList from "../../Pages/Home/CategoriesSection/ElectricCarList";
+import LuxuryCarList from "../../Pages/Home/CategoriesSection/LuxuryCarList";
+import MicroBusCarList from "../../Pages/Home/CategoriesSection/MicroBusCarList";
 
  const router = createBrowserRouter([
     {
@@ -25,6 +27,14 @@ import ElectricCarList from "../../Pages/Home/CategoriesSection/ElectricCarList"
             {
                 path:'/electriccarlist',
                 element:<ElectricCarList></ElectricCarList>
+            },
+            {
+                path:'/luxurycarlist',
+                element:<LuxuryCarList></LuxuryCarList>
+            },
+            {
+                path:'/microbuscarlist',
+                element:<MicroBusCarList></MicroBusCarList>
             }
         ]
     }

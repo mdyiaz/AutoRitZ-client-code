@@ -28,22 +28,22 @@ const LuxuryCarBookingModal = ({buyLuxuryCar,  setBuyLuxuryCar}) => {
     console.log(booking);
 
 
-    // fetch('http://localhost:5000/electricbookings', {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify(booking)
-    // })
-    // .then(res => res.json())
-    // .then(data => {
-    //   console.log(data);
+    fetch('http://localhost:5000/luxurybookings', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(booking)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
      
-    //   if (data.acknowledged){
-    //     setBuyLuxuryCar(null);
-    //     toast.success('Booking Confirmed')
-    //   }
-    // })
+      if (data.acknowledged){
+        setBuyLuxuryCar(null);
+        toast.success('Booking Confirmed')
+      }
+    })
    
    
   }

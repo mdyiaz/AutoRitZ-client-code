@@ -7,6 +7,7 @@ import ElectricCarList from "../../Pages/Home/CategoriesSection/ElectricCarList"
 import LuxuryCarList from "../../Pages/Home/CategoriesSection/LuxuryCarList";
 import MicroBusCarList from "../../Pages/Home/CategoriesSection/MicroBusCarList";
 import Register from "../../Pages/Register/Register";
+import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
 
  const router = createBrowserRouter([
     {
@@ -40,8 +41,13 @@ import Register from "../../Pages/Register/Register";
             {
                 path:'/microbuscarlist',
                 element:<MicroBusCarList></MicroBusCarList>
-            }
+            },
+            
         ]
+    },
+    {
+        path: '/dashboard',
+        element:<Dashboard></Dashboard>
     }
 ])
 

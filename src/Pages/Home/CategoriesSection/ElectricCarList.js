@@ -1,14 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
 const ElectricCarList = () => {
 
-    const [electricCarList, setElectricCarList] = useState([]);
+    // const [electricCarList, setElectricCarList] = useState([]);
 
-    useEffect( () => {
-        fetch('electric.json')
-        .then(res => res.json())
-        .then(data => setElectricCarList(data))
-    },[])
+
+// useQuery Start____
+
+    const {data:electricCarList = [] } = useQuery({
+      queryKey:['electricCarList'],
+      queryFn: () => fetch('http://localhost:5000/electriccarlist')
+      .then(res => res.json())
+    })
+
+
+    // useQuery End____
+
+
+
+    // useEffect( () => {
+    //     fetch('http://localhost:5000/electriccarlist')
+    //     .then(res => res.json())
+    //     .then(data => setElectricCarList(data))
+    // },[])
 
     return (
         <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>

@@ -5,7 +5,7 @@ const MicroBusCarList = () => {
     const [microBusCarList, setMicroBusCarList] = useState([]);
 
     useEffect( () => {
-        fetch('microbus.json')
+        fetch('http://localhost:5000/microbuscarlist')
         .then(res => res.json())
         .then(data => setMicroBusCarList(data))
     },[])

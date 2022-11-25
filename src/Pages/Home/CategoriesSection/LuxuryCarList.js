@@ -5,7 +5,7 @@ const LuxuryCarList = () => {
     const [luxuryCarList, setLuxuryCarList] = useState([]);
 
     useEffect( () => {
-        fetch('luxury.json')
+        fetch('http://localhost:5000/luxurycarlist')
         .then(res => res.json())
         .then(data => setLuxuryCarList(data))
     },[])

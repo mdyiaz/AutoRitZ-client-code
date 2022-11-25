@@ -12,6 +12,8 @@ const MicroBusCarList = () => {
         .then(res => res.json())
         .then(data => setMicroBusCarList(data))
     },[])
+
+    
     return (
        <section>
 
@@ -62,7 +64,7 @@ const MicroBusCarList = () => {
 
     {
         buyMicroBusCar &&
-        
+
         <MicroBusCarBookingModal
         buyMicroBusCar={buyMicroBusCar}
         setBuyMicroBusCar={setBuyMicroBusCar}

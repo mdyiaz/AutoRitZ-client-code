@@ -1,20 +1,26 @@
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+import BookingModal from './BookingModal/BookingModal';
 
 const ElectricCarList = () => {
 
     // const [electricCarList, setElectricCarList] = useState([]);
 
+    const [buyElectricCar, setBuyElectricCar] = useState(null);
 
 // useQuery Start____
 
     const {data:electricCarList = [] } = useQuery({
       queryKey:['electricCarList'],
-      queryFn: () => fetch('http://localhost:5000/electriccarlist')
-      .then(res => res.json())
+      queryFn: async () => {
+        const res = await fetch('http://localhost:5000/electriccarlist')
+        const data = await res.json();
+        return data;
+        
+      }
     })
 
-
-    // useQuery End____
+// useQuery End____
 
 
 
@@ -25,11 +31,16 @@ const ElectricCarList = () => {
     // },[])
 
     return (
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
+       <section>
+
+<div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
             {
                 electricCarList.map(electricCar => {
                     return (
-                        <div key={electricCar._id}>
+                        <div key={electricCar._id}
+                        setBuyElectricCar={setBuyElectricCar}
+                        electricCar={electricCar}
+                        >
 
 
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -53,7 +64,11 @@ const ElectricCarList = () => {
 
       <button className="btn btn-warning text-white mb-2">Selling Price: {electricCar.price}</button>
       <button className="btn btn-active btn-primary text-white mb-2">Original Price: {electricCar.originalPrice}</button>
-      <button className="btn btn-success w-full text-white">Book Now</button>
+
+
+     
+      <label htmlFor="booking-modal" className="btn btn-success w-full text-white" onClick={() => setBuyElectricCar(electricCar)}>Book Now</label>
+
 
 
     </div>
@@ -66,6 +81,18 @@ const ElectricCarList = () => {
                 })
             }
         </div>
+
+{
+
+buyElectricCar &&
+        <BookingModal
+        
+        buyElectricCar = {buyElectricCar}
+        >
+        </BookingModal>
+}
+
+       </section>
     );
 };
 

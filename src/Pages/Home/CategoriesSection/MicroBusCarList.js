@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import MicroBusCarBookingModal from './BookingModal/MicroBusCarBookingModal';
 
 const MicroBusCarList = () => {
 
     const [microBusCarList, setMicroBusCarList] = useState([]);
+
+    const [buyMicroBusCar, setBuyMicroBusCar] = useState(null);
 
     useEffect( () => {
         fetch('http://localhost:5000/microbuscarlist')
@@ -10,11 +13,16 @@ const MicroBusCarList = () => {
         .then(data => setMicroBusCarList(data))
     },[])
     return (
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
+       <section>
+
+
+<div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
         {
             microBusCarList.map(microbusCar => {
                 return (
-                    <div key={microbusCar._id}>
+                    <div key={microbusCar._id}
+                    setBuyMicroBusCar={setBuyMicroBusCar}
+                    >
 
 
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -38,7 +46,7 @@ const MicroBusCarList = () => {
 
   <button className="btn btn-warning mb-2 text-white">Selling Price: {microbusCar.price}</button>
   <button className="btn btn-active btn-primary mb-2 text-white">Original Price: {microbusCar.originalPrice}</button>
-  <button className="btn btn-success w-full text-white ">Book Now</button>
+  <label htmlFor="booking-modal-3" className="btn btn-success w-full text-white" onClick={() => setBuyMicroBusCar(microbusCar)} >Book Now</label>
 
 
 </div>
@@ -51,6 +59,19 @@ const MicroBusCarList = () => {
             })
         }
     </div>
+
+    {
+        buyMicroBusCar &&
+        
+        <MicroBusCarBookingModal
+        buyMicroBusCar={buyMicroBusCar}
+        setBuyMicroBusCar={setBuyMicroBusCar}
+        >
+    
+        </MicroBusCarBookingModal>
+    }
+
+       </section>
     );
 };
 

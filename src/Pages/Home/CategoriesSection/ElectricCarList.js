@@ -39,7 +39,7 @@ const ElectricCarList = () => {
                     return (
                         <div key={electricCar._id}
                         setBuyElectricCar={setBuyElectricCar}
-                        electricCar={electricCar}
+                        
                         >
 
 
@@ -88,6 +88,7 @@ buyElectricCar &&
         <BookingModal
         
         buyElectricCar = {buyElectricCar}
+        setBuyElectricCar={setBuyElectricCar}
         >
         </BookingModal>
 }

@@ -1,21 +1,49 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import LuxuryCarBookingModal from './BookingModal/LuxuryCarBookingModal';
 
 const LuxuryCarList = () => {
 
-    const [luxuryCarList, setLuxuryCarList] = useState([]);
+    // const [luxuryCarList, setLuxuryCarList] = useState([]);
 
-    useEffect( () => {
-        fetch('http://localhost:5000/luxurycarlist')
-        .then(res => res.json())
-        .then(data => setLuxuryCarList(data))
-    },[])
+    const [buyLuxuryCar, setBuyLuxuryCar] = useState(null);
+
+
+
+
+
+    const {data:luxuryCarList = [] } = useQuery({
+      queryKey:['luxuryCarList'],
+      queryFn: async () => {
+        const res = await fetch('http://localhost:5000/luxurycarlist')
+        const data = await res.json();
+        return data;
+        
+      }
+    })
+
+
+
+    // useEffect( () => {
+    //     fetch('http://localhost:5000/luxurycarlist')
+    //     .then(res => res.json())
+    //     .then(data => setLuxuryCarList(data))
+    // },[])
+
+
+
     return (
     
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
+       <section>
+
+
+<div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
             {
                 luxuryCarList.map(luxuryCar => {
                     return (
-                        <div key={luxuryCar._id}>
+                        <div key={luxuryCar._id}
+                        setBuyLuxuryCar={setBuyLuxuryCar}
+                        >
 
 
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -39,7 +67,9 @@ const LuxuryCarList = () => {
 
       <button className="btn btn-warning mb-2 text-white">Selling Price: {luxuryCar.price}</button>
       <button className="btn btn-active btn-primary mb-2 text-white">Original Price: {luxuryCar.originalPrice}</button>
-      <button className="btn btn-success w-full text-white ">Book Now</button>
+     
+      <label htmlFor="booking-modal-2" className="btn btn-success w-full text-white" onClick={() => setBuyLuxuryCar(luxuryCar)}>Book Now</label>
+
 
 
 
@@ -53,6 +83,25 @@ const LuxuryCarList = () => {
                 })
             }
         </div>
+
+
+        {
+
+            buyLuxuryCar &&
+
+<LuxuryCarBookingModal
+       buyLuxuryCar = {buyLuxuryCar}
+       setBuyLuxuryCar={setBuyLuxuryCar}
+>
+
+</LuxuryCarBookingModal>
+
+}
+
+
+
+
+       </section>
     );
 };
 

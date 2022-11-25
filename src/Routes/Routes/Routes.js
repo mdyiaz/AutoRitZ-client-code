@@ -8,6 +8,7 @@ import LuxuryCarList from "../../Pages/Home/CategoriesSection/LuxuryCarList";
 import MicroBusCarList from "../../Pages/Home/CategoriesSection/MicroBusCarList";
 import Register from "../../Pages/Register/Register";
 import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
+import Error404Page from "../../Error404Page/Error404Page";
 
  const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
     {
         path: '/dashboard',
         element:<Dashboard></Dashboard>
+    },
+    {
+        path:'*',
+        element:<Error404Page></Error404Page>
     }
 ])
 

@@ -19,6 +19,9 @@ const BookingModal = ({buyElectricCar,  setBuyElectricCar}) => {
 
     const booking = {
       name,
+      productName: buyElectricCar.name,
+      service: buyElectricCar._id,
+      productImg: buyElectricCar.picture,
       email,
       phone,
       location,

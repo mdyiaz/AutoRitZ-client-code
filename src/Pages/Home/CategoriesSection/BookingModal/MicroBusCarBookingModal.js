@@ -20,6 +20,9 @@
   
       const booking = {
         name,
+        productName: buyMicroBusCar.name,
+        service: buyMicroBusCar._id,
+        productImg: buyMicroBusCar.picture,
         email,
         phone,
         location,

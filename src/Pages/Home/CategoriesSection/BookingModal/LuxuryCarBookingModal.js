@@ -20,6 +20,9 @@ const LuxuryCarBookingModal = ({buyLuxuryCar,  setBuyLuxuryCar}) => {
 
     const booking = {
       name,
+      productName: buyLuxuryCar.name,
+      service: buyLuxuryCar._id,
+      productImg: buyLuxuryCar.picture,
       email,
       phone,
       location,

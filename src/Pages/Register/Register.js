@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import signUpImg from '../../assets/register.jpg'
 import { AuthContext } from '../../Contexts/Authprovider';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
 
@@ -13,7 +14,19 @@ const Register = () => {
 
     const [signUpError, setSignUpError] = useState('');
 
+
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail)
+
+
+
+
+
     const navigate = useNavigate();
+
+    if(token){
+      navigate('/')
+    }
 
     const handleRegister = (data) =>{
 
@@ -29,7 +42,7 @@ const Register = () => {
 
             updateUser(userInfo)
             .then(() => {
-              navigate('/');
+              saveUser(data.name, data.email);
             })
             .catch(err => console.error (err));
         })
@@ -39,6 +52,28 @@ const Register = () => {
           setSignUpError(error.message)
         });
     }
+
+
+    const saveUser = (name, email) => {
+        const user = {name, email};
+        fetch('http://localhost:5000/users',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+          setCreatedUserEmail(email);
+         
+        })
+    }
+
+
+
+    
+
     return (
         <div className="hero w-full mb-10 my-20">
         <div className="hero-content grid md:grid-cols-2 flex-col gap-20 lg:flex-row">

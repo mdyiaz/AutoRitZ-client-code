@@ -84,5 +84,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 6. Live Link: https://assignment-12-f0ec2.web.appa
 
-7. Admin: wolverine@gmail.com
-pass:    pass:GVDfec689@#%
+7. Admin email: wolverine@gmail.com
+password:    pass:GVDfec689@#%

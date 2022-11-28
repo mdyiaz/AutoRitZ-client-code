@@ -24,7 +24,7 @@ const Register = () => {
 
 
 
-
+// using use navigate_______________________
     const navigate = useNavigate();
 
     if(token){

@@ -82,4 +82,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 5. This page is designed for you, I hope your experiance will good.  
 
-6. Live Link: https://assignment-12-f0ec2.web.app
+6. Live Link: https://assignment-12-f0ec2.web.appa
+
+7. Admin: wolverine@gmail.com
+pass:    pass:GVDfec689@#%

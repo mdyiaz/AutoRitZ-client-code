@@ -14,6 +14,11 @@ import DashBoardLayOut from "../../LayOut/DashBoardLayOut";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 import AllSellers from "../../Pages/Dashboard/AllSellers/AllSellers";
 import AllBuyers from "../../Pages/Dashboard/AllBuyers/AllBuyers";
+import AdminRoutes from "../PrivateRoutes/AdminRoutes";
+import AddProductBySeller from "../../Pages/Dashboard/AddProductBySeller/AddProductBySeller";
+import MyProducts from "../../Pages/Dashboard/AddProductBySeller/MyProducts";
+import BuyerRoutes from "../PrivateRoutes/BuyerRoutes";
+import SellerRoute from "../PrivateRoutes/SellerRoute";
 
  const router = createBrowserRouter([
     {
@@ -57,16 +62,25 @@ import AllBuyers from "../../Pages/Dashboard/AllBuyers/AllBuyers";
         children:[
             {
                 path:'/dashboard',
-                element:<MyOrders></MyOrders>
+                element:<BuyerRoutes><MyOrders></MyOrders></BuyerRoutes>
+            },
+            {
+                path:'/dashboard/addproduct',
+                element:<SellerRoute><AddProductBySeller></AddProductBySeller></SellerRoute>
+            },
+            { 
+                path:'/dashboard/myproducts',
+                element:<SellerRoute><MyProducts></MyProducts></SellerRoute>
             },
             {
                 path:'/dashboard/allsellers',
-                element:<AllSellers></AllSellers>
+                element:<AdminRoutes><AllSellers></AllSellers></AdminRoutes>
             },
             {
                 path:'/dashboard/allbuyers',
-                element:<AllBuyers></AllBuyers>
-            }
+                element:<AdminRoutes><AllBuyers></AllBuyers></AdminRoutes>
+            },
+           
         ]
     },
 

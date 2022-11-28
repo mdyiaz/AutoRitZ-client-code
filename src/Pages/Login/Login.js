@@ -3,9 +3,12 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../assets/login.jpg'
 import { AuthContext } from '../../Contexts/Authprovider';
+import useTitle from '../../hooks/useTitle';
 import useToken from '../../hooks/useToken';
 
 const Login = () => {
+
+  useTitle('Login');
 
     const {register, formState: { errors }, handleSubmit} = useForm();
 

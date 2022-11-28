@@ -1,8 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import LuxuryCarBookingModal from './BookingModal/LuxuryCarBookingModal';
 
 const LuxuryCarList = () => {
+
+  useTitle('Luxury Car List');
 
     // const [luxuryCarList, setLuxuryCarList] = useState([]);
 
@@ -39,7 +42,8 @@ const LuxuryCarList = () => {
 
 <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
             {
-                luxuryCarList.map(luxuryCar => {
+              luxuryCarList &&
+                luxuryCarList?.map(luxuryCar => {
                     return (
                         <div key={luxuryCar._id}
                         setBuyLuxuryCar={setBuyLuxuryCar}

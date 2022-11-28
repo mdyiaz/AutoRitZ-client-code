@@ -1,8 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import BookingModal from './BookingModal/BookingModal';
 
 const ElectricCarList = () => {
+
+  useTitle('Electric Car List');
 
     // const [electricCarList, setElectricCarList] = useState([]);
 
@@ -35,7 +38,8 @@ const ElectricCarList = () => {
 
 <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
             {
-                electricCarList.map(electricCar => {
+                electricCarList &&
+                electricCarList?.map(electricCar => {
                     return (
                         <div key={electricCar._id}
                         setBuyElectricCar={setBuyElectricCar}

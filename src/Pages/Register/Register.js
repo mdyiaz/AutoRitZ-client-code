@@ -4,9 +4,12 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import signUpImg from '../../assets/register.jpg'
 import { AuthContext } from '../../Contexts/Authprovider';
+import useTitle from '../../hooks/useTitle';
 import useToken from '../../hooks/useToken';
 
 const Register = () => {
+
+  useTitle('Register');
 
     const {register, formState: { errors }, handleSubmit} = useForm();
 
@@ -31,6 +34,7 @@ const Register = () => {
     const handleRegister = (data) =>{
 
       setSignUpError('');
+      console.log(data.userType);
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
@@ -42,7 +46,7 @@ const Register = () => {
 
             updateUser(userInfo)
             .then(() => {
-              saveUser(data.name, data.email);
+              saveUser(data.name, data.email , data.userType);
             })
             .catch(err => console.error (err));
         })
@@ -54,8 +58,9 @@ const Register = () => {
     }
 
 
-    const saveUser = (name, email) => {
-        const user = {name, email};
+    const saveUser = (name, email,userType) => {
+        const user = {name, email, userType};
+        console.log(user);
         fetch('http://localhost:5000/users',{
             method: 'POST',
             headers: {
@@ -103,6 +108,31 @@ const Register = () => {
   {errors.name && <p className='text-red-500' role="alert"> {errors.name?.message}</p>}
  
 </div>
+
+
+
+
+
+<div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">User Type</span>
+                        </label>
+                        <select
+                            {...register("userType", {
+                                required: true
+                            })}
+                            className="select select-bordered w-full max-w-xs">
+                            <option disabled selected>Buyer</option>
+                            <option>Seller</option>
+                            
+                        </select>
+                        {/* {errors.userType && <p className='text-red-500'>{errors.userType.message}</p>} */}
+                    </div>
+
+
+
+
+{/* select user option setUp________________________________________________________________________________________________________________ */}
 
 
 

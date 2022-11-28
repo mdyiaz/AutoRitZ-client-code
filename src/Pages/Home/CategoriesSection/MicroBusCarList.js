@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import MicroBusCarBookingModal from './BookingModal/MicroBusCarBookingModal';
 
 const MicroBusCarList = () => {
 
     const [microBusCarList, setMicroBusCarList] = useState([]);
+
+    useTitle('MicroBusCar List');
 
     const [buyMicroBusCar, setBuyMicroBusCar] = useState(null);
 
@@ -20,7 +23,8 @@ const MicroBusCarList = () => {
 
 <div className='grid lg:grid-cols-3 sm:grid-cols-1 mb-10 mt-10'>
         {
-            microBusCarList.map(microbusCar => {
+            microBusCarList &&
+            microBusCarList?.map(microbusCar => {
                 return (
                     <div key={microbusCar._id}
                     setBuyMicroBusCar={setBuyMicroBusCar}

@@ -4,6 +4,8 @@ import { AuthContext } from '../../../../Contexts/Authprovider';
 
 const BookingModal = ({buyElectricCar,  setBuyElectricCar}) => {
 
+  
+
   const {user} = useContext(AuthContext);
 
   const handleBooking = event => {

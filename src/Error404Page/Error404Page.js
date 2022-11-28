@@ -1,7 +1,9 @@
 import React from 'react';
 import error from '../assets/error.jpg';
+import useTitle from '../hooks/useTitle';
 
 const Error404Page = () => {
+    useTitle('404 Page');
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
             <img className='' src={error} alt="" />

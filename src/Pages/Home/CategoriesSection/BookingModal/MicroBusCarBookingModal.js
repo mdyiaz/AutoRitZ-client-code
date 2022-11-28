@@ -31,7 +31,7 @@
       console.log(booking);
   
   
-      fetch('http://localhost:5000/microbusbookings', {
+      fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/microbusbookings', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

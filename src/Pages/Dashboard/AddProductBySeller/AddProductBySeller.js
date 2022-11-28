@@ -44,7 +44,7 @@ const AddProductBySeller = () => {
           }
 
           // save addProducts information in database
-          fetch('http://localhost:5000/addproducts', {
+          fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/addproducts', {
             method: 'POST',
             headers: {
               'content-type': 'application/json',

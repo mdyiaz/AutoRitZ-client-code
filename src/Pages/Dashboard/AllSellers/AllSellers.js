@@ -23,7 +23,7 @@ const AllSellers = () => {
     const {data: users = [], isLoading, refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/users');
+            const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/sellers');
             const data = await res.json();
             return data;
         }
@@ -33,7 +33,7 @@ const AllSellers = () => {
 
 
     const handleDeleteSeller = seller => {
-      fetch(`http://localhost:5000/users/${seller._id}` , {
+      fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/users/${seller._id}` , {
            method: 'DELETE',
            headers: {
                authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -56,7 +56,7 @@ const AllSellers = () => {
    const handleVerifySeller = (id) => {
     const agree = window.confirm('Are you sure you want to Advertized_?');
     if(agree){
-      fetch(`http://localhost:5000/users/${id}`,{
+      fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/users/${id}`,{
         method: 'PUT'
       })
       .then(res => res.json())

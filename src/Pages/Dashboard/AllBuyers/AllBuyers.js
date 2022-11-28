@@ -32,7 +32,7 @@ const AllBuyers = () => {
     const {data: buyers = [], isLoading, refetch} = useQuery({
         queryKey: ['buyers'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/buyers');
+            const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/buyers');
             const data = await res.json();
             return data;
         }
@@ -46,7 +46,7 @@ const AllBuyers = () => {
 
 
     const handleDeleteBuyer = buyer => {
-      fetch(`http://localhost:5000/buyers/${buyer._id}` , {
+      fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/buyers/${buyer._id}` , {
            method: 'DELETE',
            headers: {
                authorization: `bearer ${localStorage.getItem('accessToken')}`

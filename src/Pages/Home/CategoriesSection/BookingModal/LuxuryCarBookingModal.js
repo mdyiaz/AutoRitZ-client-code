@@ -31,7 +31,7 @@ const LuxuryCarBookingModal = ({buyLuxuryCar,  setBuyLuxuryCar}) => {
     console.log(booking);
 
 
-    fetch('http://localhost:5000/luxurybookings', {
+    fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/luxurybookings', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

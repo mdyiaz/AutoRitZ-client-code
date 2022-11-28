@@ -31,7 +31,7 @@ const BookingModal = ({buyElectricCar,  setBuyElectricCar}) => {
     }
 
 
-    fetch('http://localhost:5000/electricbookings', {
+    fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/electricbookings', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

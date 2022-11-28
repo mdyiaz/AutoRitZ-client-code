@@ -18,7 +18,7 @@ const LuxuryCarList = () => {
     const {data:luxuryCarList = [] } = useQuery({
       queryKey:['luxuryCarList'],
       queryFn: async () => {
-        const res = await fetch('http://localhost:5000/luxurycarlist')
+        const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/luxurycarlist')
         const data = await res.json();
         return data;
         
@@ -28,7 +28,7 @@ const LuxuryCarList = () => {
 
 
     // useEffect( () => {
-    //     fetch('http://localhost:5000/luxurycarlist')
+    //     fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/luxurycarlist')
     //     .then(res => res.json())
     //     .then(data => setLuxuryCarList(data))
     // },[])

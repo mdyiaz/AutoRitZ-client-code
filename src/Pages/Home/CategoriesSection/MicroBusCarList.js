@@ -11,7 +11,7 @@ const MicroBusCarList = () => {
     const [buyMicroBusCar, setBuyMicroBusCar] = useState(null);
 
     useEffect( () => {
-        fetch('http://localhost:5000/microbuscarlist')
+        fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/microbuscarlist')
         .then(res => res.json())
         .then(data => setMicroBusCarList(data))
     },[])

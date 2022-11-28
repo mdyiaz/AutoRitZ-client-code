@@ -30,7 +30,7 @@ const MyProducts = () => {
         queryKey: ['addproducts'],
         queryFn: async () => {
             try{
-                const res = await fetch('http://localhost:5000/addproducts', {
+                const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/addproducts', {
                         headers: {
                             authorization: `bearer ${localStorage.getItem('accessToken')}`
                         }
@@ -54,7 +54,7 @@ const MyProducts = () => {
 const advataize = (id) => {
     const agree = window.confirm('Are you sure you want to Advertized_?');
     if(agree){
-      fetch(`http://localhost:5000/addproducts/${id}`,{
+      fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/addproducts/${id}`,{
         method: 'PUT'
       })
       .then(res => res.json())
@@ -79,7 +79,7 @@ const advataize = (id) => {
 
 
     const handleDeleteProduct = product => {
-      fetch(`http://localhost:5000/addproducts/${product._id}`,{
+      fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/addproducts/${product._id}`,{
             method: 'DELETE',
             headers: {
               authorization: `bearer ${localStorage.getItem('accessToken')}`

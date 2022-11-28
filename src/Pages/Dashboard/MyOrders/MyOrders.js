@@ -14,7 +14,7 @@ const MyOrders = () => {
 
 // useQuery start____
 
-  const url = `http://localhost:5000/electricbookings?email=${user?.email}`;
+  const url = `https://b612-used-products-resale-server-side-mdyiaz.vercel.app/electricbookings?email=${user?.email}`;
 
   const {data: electricbookings = [] } = useQuery({
     queryKey: ['electricbookings', user?.email],
@@ -34,7 +34,7 @@ const MyOrders = () => {
 
 
 
-const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
+const url1 = `https://b612-used-products-resale-server-side-mdyiaz.vercel.app/luxurybookings?email=${user?.email}`;
 
   const {data: luxurybookings = [] } = useQuery({
     queryKey: ['luxurybookings', user?.email],
@@ -53,7 +53,7 @@ const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
 
 
 
-  const url2 = `http://localhost:5000/microbusbookings?email=${user?.email}`;
+  const url2 = `https://b612-used-products-resale-server-side-mdyiaz.vercel.app/microbusbookings?email=${user?.email}`;
 
   const {data: microbusbookings = [] } = useQuery({
     queryKey: ['microbusbookings', user?.email],
@@ -87,7 +87,7 @@ const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
         <th>Car Name</th>
         <th>Price</th>
         <th>Payment</th>
-        <th></th>
+       
       </tr>
     </thead>
     <tbody>
@@ -122,10 +122,8 @@ const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
          {electricbooking.price}
           
         </td>
-        <td>Indigo</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
+        <td><button className="btn btn-primary">Pay</button></td>
+        
       </tr>)
       }
 
@@ -163,10 +161,8 @@ const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
          {luxurybooking.price}
          
         </td>
-        <td>Indigo</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
+        <td><button className="btn btn-primary">Pay</button></td>
+        
       </tr>)
 
 
@@ -204,10 +200,8 @@ const url1 = `http://localhost:5000/luxurybookings?email=${user?.email}`;
         <td>
           {microbusbooking.price}
         </td>
-        <td>Indigo</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
+        <td><button className="btn btn-primary">Pay</button></td>
+        
       </tr>)
       }
 

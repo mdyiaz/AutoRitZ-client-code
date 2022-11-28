@@ -16,7 +16,7 @@ const ElectricCarList = () => {
     const {data:electricCarList = [] } = useQuery({
       queryKey:['electricCarList'],
       queryFn: async () => {
-        const res = await fetch('http://localhost:5000/electriccarlist')
+        const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/electriccarlist')
         const data = await res.json();
         return data;
         
@@ -28,7 +28,7 @@ const ElectricCarList = () => {
 
 
     // useEffect( () => {
-    //     fetch('http://localhost:5000/electriccarlist')
+    //     fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/electriccarlist')
     //     .then(res => res.json())
     //     .then(data => setElectricCarList(data))
     // },[])

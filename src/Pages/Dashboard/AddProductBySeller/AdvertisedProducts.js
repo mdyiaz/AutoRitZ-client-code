@@ -9,7 +9,7 @@ const AdvertisedProducts = () => {
         queryKey: ['advrtized'],
         queryFn: async () => {
             try{
-                const res = await fetch('http://localhost:5000/advrtized')
+                const res = await fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/advrtized')
                 const data = await res.json();
                 return data;
             }

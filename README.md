@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### My website Details
+1. My page is an old car buying and selling platform.
+
+2.You will get several benefits on this page, you can easily sell your old car through our page.
+
+3.You can buy the car of your choice from this page of mine at an affordable price.
+
+4. In this page you will find world famous cars which you will like very much, the cars are old but in very good condition.
+
+5. This page is designed for you, I hope your experiance will good.  
+
+6. Live Link: 

@@ -6,7 +6,7 @@ const useSeller = email => {
 
     useEffect(() =>{
         if(email){
-            fetch(`http://localhost:5000/usertype/seller/${email}`)
+            fetch(`https://b612-used-products-resale-server-side-mdyiaz.vercel.app/usertype/seller/${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data, 'from isAdmin');

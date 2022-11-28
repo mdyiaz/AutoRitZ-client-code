@@ -61,7 +61,7 @@ const Register = () => {
     const saveUser = (name, email,userType) => {
         const user = {name, email, userType};
         console.log(user);
-        fetch('http://localhost:5000/users',{
+        fetch('https://b612-used-products-resale-server-side-mdyiaz.vercel.app/users',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -122,7 +122,7 @@ const Register = () => {
                                 required: true
                             })}
                             className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>Buyer</option>
+                            <option  selected>Buyer</option>
                             <option>Seller</option>
                             
                         </select>

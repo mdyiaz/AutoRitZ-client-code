@@ -6,7 +6,7 @@ const ExtraSection = () => {
             <h1 className='text-5xl font-bold text-center pb-5'>What Our Serve For You</h1>
             <p className='text-center text-2xl pb-36'>We provide many of the best services for you and you will get the <br /> best benefits here</p>
 
-            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-20'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-16'>
 
                 <div>
                     <h1 className='text-3xl font-bold'>Top Buy & Sell Car</h1>
